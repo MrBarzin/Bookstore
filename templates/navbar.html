@@ -1,0 +1,10 @@
+<nav>
+    {% if user.is_authenticated %} 
+        {{user.username}}
+        <a href="{% url 'logout' %}">LogOut</a>
+    {% else %} 
+        <a href="{% url 'login' %}">LogIn</a>
+        <a href="{% url 'signup' %}">SignUp</a>
+        
+    {% endif %}
+</nav>
