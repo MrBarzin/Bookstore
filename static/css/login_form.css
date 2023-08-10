@@ -1,0 +1,37 @@
+
+    
+    input {
+      width: 60vw;
+      padding: 5px;
+    }
+    #My_form{
+    margin-top: 30vh;
+    }  
+    #label_td{
+
+        font-size: 25px;
+    
+    }
+  
+@media only screen and (min-width:600px) {
+            
+    input {
+        font-size: 16px;
+        width: 40vw;
+        padding: 5px;
+    }
+    #My_form{
+        margin-top: 30vh;
+    }  
+}
+@media only screen and (min-width:1024px) {
+            
+    input{
+        font-size: 20px;
+        width: 30vw;
+        padding: 10px;
+    }
+    #My_form{
+        margin-top: 30vh;
+    }  
+}
