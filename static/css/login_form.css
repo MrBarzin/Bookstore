@@ -3,6 +3,7 @@
     input {
       width: 60vw;
       padding: 5px;
+      margin: 10px;
     }
     #My_form{
     margin-top: 30vh;
@@ -19,6 +20,7 @@
         font-size: 16px;
         width: 40vw;
         padding: 5px;
+        margin: 5px;
     }
     #My_form{
         margin-top: 30vh;
@@ -30,6 +32,7 @@
         font-size: 20px;
         width: 30vw;
         padding: 10px;
+        margin: 5px;
     }
     #My_form{
         margin-top: 30vh;

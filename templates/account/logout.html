@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <h1>Log Out</h1>
+    <P>Are you sure you want to log Out? </P>
+    <form method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <Button class="button is-danger">Log Out</Button>
+    </form>
+    <button onclick="window.history.back()"  class="button is-primary">Cancel</button>
+{% endblock %}
