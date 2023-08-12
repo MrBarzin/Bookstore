@@ -52,7 +52,7 @@ INSTALLED_APPS = [
 CRISPY_TEMPLATE_PACK = 'bootstrap'
 
 LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'login'
+LOGOUT_REDIRECT_URL = 'account_login'
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
 SITE_ID = 1
@@ -63,7 +63,15 @@ AUTHENTICATION_BACKENDS = (
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+DEFSULT_FROM_EMAIL = 'admin@barzin-bookstore.com'
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'project5userdata@gmail.com'
+EMAIL_HOST_PASSWORD = 'kgubxsrddslixrmr'
+EMAIL_PORT = 587
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
