@@ -1,6 +1,7 @@
 <div class="container">
     <nav class="navbar is-dark is-fixed-top ">
-        <a href="{% url 'home' %}" class="navbar-item is-active has-text-warning" >Bookstore</a>
+        <a href="{% url 'home' %}" class="navbar-item is-active has-text-primary" >Home</a>
+        <a href="{% url 'book_list' %}" class="navbar-item is-active has-text-warning" >Bookstore</a>
         <a class="navbar-item has-text-danger" href="{% url 'about' %}">About</a>
         <div class="navbar-end">
         {% if user.is_authenticated %}
