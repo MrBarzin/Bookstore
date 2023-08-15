@@ -3,9 +3,22 @@
 {% block content %}
 
         <div>
-            <h3><h2 class="title" >{{object.title}} </h2>  writed by : {{object.author}} </h3><p> {{object.price}}$ </p>
+            <h3><h2 class="title" >{{book.title}} </h2>  writed by : {{book.author}} </h3><p> {{book.price}}$ </p>
         </div>
-    
+        <p style="margin-top:60vh;  font-size: 40px; display: block;" class="has-text-warning has-background-danger">Reviews : </p>
+        <div style="margin-top: 5vh;">
+            {% for review in book.reviews.all %}
+                <article class="message  is-info">
+                    
+                    <div class="message-header"> 
+                        <p> <p style="display: inline;font-size: 20px;"> {{review.reviewTitle}} </p>by:   {{review.username}} </p>
+                    </div>
+                    <div class="message-body">
+                        <p>{{review.reviewText}}</p>
+                    </div>
+                </article>
+            {% endfor %}
+        </div>
 
 
 {% endblock %}
