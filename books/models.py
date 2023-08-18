@@ -2,7 +2,6 @@ from django.db import models
 from django.urls import reverse
 import uuid 
 from django.contrib.auth import get_user_model
-usermodel = get_user_model()
 class Book(models.Model):
     id =models.UUIDField(
         primary_key=True,
@@ -13,6 +12,11 @@ class Book(models.Model):
     author = models.CharField(max_length=200)
     price = models.DecimalField(max_digits=6,decimal_places=2)
     cover = models.ImageField(upload_to='covers/',default='covers/default.jpeg')
+
+    class Meta:
+        permissions=[
+            ('special_status','Can read all books')
+        ]
     
 
     def __str__(self) -> str:
