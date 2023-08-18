@@ -4,6 +4,9 @@
         <a href="{% url 'book_list' %}" class="navbar-item is-active has-text-warning" >Bookstore</a>
         <a class="navbar-item has-text-danger" href="{% url 'about' %}">About</a>
         <div class="navbar-end">
+        <form method="get" action="{% url 'search_results' %}">
+            <input name="q" style="margin-top: 13px;" type="text" class="input" placeholder="Find book">
+        </form>
         {% if user.is_authenticated %}
         <a class="navbar-item" href="{% url 'account_logout' %}">Log Out</a>
         {% else %}

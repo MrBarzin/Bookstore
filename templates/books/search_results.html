@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<center>
+    <h3>Serach Results</h3>
+    <table>
+        <tbody>
+        {% for book in book_list %} 
+            <tr >
+                <td><a class="button is-link" style="width: 40vw;"  href="{{ book.get_absolute_url }}">{{ book.title }}</a> </td>
+                <td style="font-size: 14px">By:{{book.author}}</td>
+            </tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+</center>
+{% endblock %}
