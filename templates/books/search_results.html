@@ -1,16 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
 <center>
-    <h3>Serach Results</h3>
+    <h2 class="title">Serach Results</h2>
     <table>
         <tbody>
-        {% for book in book_list %} 
-            <tr >
-                <td><a class="button is-link" style="width: 40vw;"  href="{{ book.get_absolute_url }}">{{ book.title }}</a> </td>
-                <td style="font-size: 14px">By:{{book.author}}</td>
-            </tr>
+        {% if book_list %}
+            {% for book in book_list %} 
+                <tr >
+                    <td><a class="button is-link" style="width: 40vw;"  href="{{ book.get_absolute_url }}">{{ book.title }}</a> </td>
+                    <td style="font-size: 14px">By:{{book.author}}</td>
+                </tr>
 
-        {% endfor %}
+            {% endfor %}
+        {% else %}
+            <h3 class="message is-danger " style="width: 30vw;font-size: 26px; display: block; ">Not Found !</h3>
+        {% endif %}
+
         </tbody>
     </table>
 </center>
