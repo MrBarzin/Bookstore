@@ -78,7 +78,7 @@ DEFSULT_FROM_EMAIL = 'admin@barzin-bookstore.com'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'project5userdata@gmail.com'
-EMAIL_HOST_PASSWORD = 'kgubxsrddslixrmr'
+EMAIL_HOST_PASSWORD = 
 EMAIL_PORT = 587
 
 MIDDLEWARE = [
